@@ -1,0 +1,31 @@
+server:
+  port: 8080  # 端口号
+
+spring:
+  application:
+    name: service-provider # 应用名称
+  main:
+    allow-circular-references: true
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/micro_service?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai"
+    username: root
+    password: password
+
+  # 配置consul注册中心
+  cloud:
+    consul:
+      # 服务注册中心的访问地址和端口号
+      host: 192.168.126.65
+      port: 8500
+      # 服务提供者信息
+      discovery:
+        register: true                                # 是否需要注册
+        instance-id: ${spring.application.name}-01    # 注册实例ID(必须唯一)
+        service-name: ${spring.application.name}      # 服务名称
+        port: ${server.port}                          # 服务端口
+        prefer-agent-address: true                    # 是否使用IP地址注册
+        ip-address: ${spring.cloud.client.ip-address} # 服务请求IP

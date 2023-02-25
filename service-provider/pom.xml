@@ -32,11 +32,11 @@
 
     <!--spring cloud consul 依赖-->
     <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-consul-discovery -->
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-      <version>3.1.0</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.cloud</groupId>-->
+<!--      <artifactId>spring-cloud-starter-consul-discovery</artifactId>-->
+<!--      <version>3.1.0</version>-->
+<!--    </dependency>-->
 
     <!--spring boot actuator 依赖-->
     <dependency>
