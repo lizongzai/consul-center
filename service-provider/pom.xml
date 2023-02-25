@@ -15,7 +15,7 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-    <java.version>11</java.version>
+    <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -33,13 +33,10 @@
 
     <!--spring cloud consul 依赖-->
     <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-consul-discovery -->
-<!--    <dependency>-->
-<!--      <groupId>org.springframework.cloud</groupId>-->
-<!--      <artifactId>spring-cloud-starter-consul-discovery</artifactId>-->
-<!--    </dependency>-->
-
-
-
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+    </dependency>
 
     <!--spring boot actuator 依赖-->
     <dependency>
