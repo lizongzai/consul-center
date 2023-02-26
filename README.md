@@ -19,11 +19,7 @@ SpringCloud微服务技术栈
 
 ### 1.2 学习目
 
-![image-20230223102134927](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20230223102134927.png)
-
-
-
-
+![image](https://user-images.githubusercontent.com/49580847/221404425-8db6a9fd-1bfa-48a0-b3f5-b2854e69a7d5.png)
 
 
 ![image](https://user-images.githubusercontent.com/49580847/221372875-c29e3338-803f-443d-bb40-f65391b0974d.png)
