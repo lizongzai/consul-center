@@ -17,97 +17,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.client.RestTemplate;
-//
-///**
-// * <p>
-// * 服务实现类
-// * </p>
-// *
-// * @author lizongzai
-// * @since 2023-02-26
-// */
-//@Service
-//public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements IOrderService {
-//
-//  @Autowired
-//  private RestTemplate restTemplate;
-//  @Autowired
-//  private OrderMapper orderMapper;
-//
-//  @Autowired
-//  @Resource
-//  private LoadBalancerClient loadBalancerClient; //Ribbon负载均衡器
-//
-//  @Override
-//  public Order getOrderById(Integer id) {
-//    Order orderById = orderMapper.getOrderById(id);
-//    System.out.println("订单信息 = " + orderById);
-//
-//    //LoadBalancerAnnotation负载均衡注解调用微服务
-////    List<Product> productList = selectProductListByLoadBalancerClient();
-//
-//    //LoadBalancerAnnotation负载均衡注解调用微服务
-//    List<Product> productList = selectProductListByLoadBalancerAnnotation();
-//
-//    //获取订单信息
-//
-//    Order order = new Order();
-//    order.setId(orderById.getId());
-//    order.setOrderNo(orderById.getOrderNo());
-//    order.setOrderAddress(orderById.getOrderAddress());
-//    order.setTotalPrice(orderById.getTotalPrice());
-//    order.setProductList(productList);
-//    return order;
-//  }
-//
-//
-//  /**
-//   * 通过LoadBalancerClient负载均衡器
-//   *
-//   * @return
-//   */
-//  private List<Product> selectProductListByLoadBalancerClient() {
-//    StringBuffer sb = null;
-//
-//    //根据服务名称获取微服务
-//    ServiceInstance serviceInstance = loadBalancerClient.choose("consul-provider-product");
-//    if (serviceInstance == null) {
-//      return null;
-//    }
-//
-//    sb = new StringBuffer();
-//    sb.append("http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/product/list");
-////    sb.append("http://" + serviceInstance.getServiceId().toString() + "/product/list");
-//    System.out.println("负载均衡 = " + sb.toString());
-//
-//    //ResponseEntity封装返回数据
-//    ResponseEntity<List<Product>> response = restTemplate.exchange(
-//        sb.toString(),
-//        HttpMethod.GET,
-//        null,
-//        new ParameterizedTypeReference<List<Product>>() {
-//        });
-//    return response.getBody();
-//  }
-//
-//
-//  /**
-//   * 通过LoadBalancerAnnotation负载均衡注解调用微服务
-//   *
-//   * @return
-//   */
-//  private List<Product> selectProductListByLoadBalancerAnnotation() {
-//    //ResponseEntity封装返回数据
-//    ResponseEntity<List<Product>> response = restTemplate.exchange(
-//        "http://consul-provider-product/product/list",
-//        HttpMethod.GET,
-//        null,
-//        new ParameterizedTypeReference<List<Product>>() {
-//        });
-//    return response.getBody();
-//  }
-//}
-
 
 /**
  * <p>
@@ -115,8 +24,9 @@ import org.springframework.web.client.RestTemplate;
  * </p>
  *
  * @author lizongzai
- * @since 2023-02-24
+ * @since 2023-02-26
  */
+
 @Service
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements IOrderService {
 
@@ -158,8 +68,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     order.setProductList(productList);
     return order;
 
-//    return new Order(id, "order-001", "Shanghai", 9899D,
-//        selectProductListByLoadBalancerAnnotation());
+    //    return new Order(id, "order-001", "Shanghai", 9899D,
+    //        selectProductListByLoadBalancerAnnotation());
 
   }
 
