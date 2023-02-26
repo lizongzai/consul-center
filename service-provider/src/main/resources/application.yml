@@ -24,7 +24,7 @@ spring:
       # 服务提供者信息
       discovery:
         register: true                                # 是否需要注册
-        instance-id: ${spring.application.name}    # 注册实例ID(必须唯一)
+        instance-id: ${spring.application.name}       # 注册实例ID(必须唯一)
         service-name: ${spring.application.name}      # 服务名称
         port: ${server.port}                          # 服务端口
         prefer-agent-address: true                    # 是否使用IP地址注册
