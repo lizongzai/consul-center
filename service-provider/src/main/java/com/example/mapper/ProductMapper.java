@@ -2,6 +2,7 @@ package com.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.pojo.Product;
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +14,5 @@ import com.example.pojo.Product;
  */
 public interface ProductMapper extends BaseMapper<Product> {
 
+  List<Product> getAllProductList();
 }

@@ -1,9 +1,9 @@
 server:
-  port: 8080  # 端口号
+  port: 8090  # 端口号
 
 spring:
   application:
-    name: service-provider # 应用名称
+    name: consumer-provider # 应用名称
   main:
     allow-circular-references: true
   mvc:

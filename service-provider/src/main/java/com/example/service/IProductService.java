@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.pojo.Product;
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +14,5 @@ import com.example.pojo.Product;
  */
 public interface IProductService extends IService<Product> {
 
+  List<Product> getAllProductList();
 }

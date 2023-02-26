@@ -8,6 +8,7 @@
   <modules>
     <module>service-provider</module>
     <module>code-generator</module>
+    <module>service-consumer</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -22,15 +23,16 @@
   </parent>
 
   <properties>
+    <!--jdk 版本号-->
     <java.version>1.8</java.version>
     <!--spring cloud 版本号-->
     <spring-cloud.version>Hoxton.SR2</spring-cloud.version>
+    <!--spring boot 版本号-->
     <spring-boot.version>2.2.4.RELEASE</spring-boot.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
-
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
@@ -38,7 +40,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
@@ -46,7 +47,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
     </dependencies>
   </dependencyManagement>
 

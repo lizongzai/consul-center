@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="code-generator" />
+        <module name="service-consumer" />
         <module name="service-provider" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="code-generator" options="-parameters" />
       <module name="consul-center" options="" />
+      <module name="service-consumer" options="-parameters" />
       <module name="service-provider" options="-parameters" />
     </option>
   </component>
