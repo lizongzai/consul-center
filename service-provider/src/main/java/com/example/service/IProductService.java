@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author lizongzai
@@ -14,5 +14,10 @@ import java.util.List;
  */
 public interface IProductService extends IService<Product> {
 
+  /**
+   * 功能描述: 获取商品列表
+   *
+   * @return
+   */
   List<Product> getAllProductList();
 }

@@ -131,7 +131,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
 
 
   /**
-   * 获取订单
+   * 功能描述: 根据主键查询订单
    *
    * @param id
    * @return
@@ -143,10 +143,10 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     //List<Product> productList = selectProductListByDiscoverClient();
 
     //LoadBalancerClient负载均衡调用微服务
-//    List<Product> productList = selectProductListByLoadBalancerClient();
+    List<Product> productList = selectProductListByLoadBalancerClient();
 
     //LoadBalancerAnnotation负载均衡注解调用微服务
-    List<Product> productList = selectProductListByLoadBalancerClient();
+    //List<Product> productList = selectProductListByLoadBalancerAnnotation();
 
     //获取订单信息
     Order orderById = orderMapper.getOrderById(id);
@@ -157,6 +157,10 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     order.setTotalPrice(orderById.getTotalPrice());
     order.setProductList(productList);
     return order;
+
+//    return new Order(id, "order-001", "Shanghai", 9899D,
+//        selectProductListByLoadBalancerAnnotation());
+
   }
 
   /**
@@ -183,7 +187,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     //获取商品列表
     ServiceInstance serviceInstance = instances.get(0);
     sb = new StringBuffer();
-    sb.append("http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/product/list");
+    sb.append(
+        "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/product/list");
 
     //ResponseEntity封装返回数据
     ResponseEntity<List<Product>> response = restTemplate.exchange(
@@ -207,12 +212,13 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
 
     //根据服务名称获取微服务
     ServiceInstance serviceInstance = loadBalancerClient.choose("service-provider");
-    if (serviceInstance ==null) {
+    if (serviceInstance == null) {
       return null;
     }
 
     sb = new StringBuffer();
-    sb.append("http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/product/list");
+    sb.append(
+        "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/product/list");
     System.out.println("负载均衡 = " + sb.toString());
 
     //ResponseEntity封装返回数据

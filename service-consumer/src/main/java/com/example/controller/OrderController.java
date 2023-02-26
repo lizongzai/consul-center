@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author lizongzai
@@ -24,6 +24,12 @@ public class OrderController {
   @Autowired
   private IOrderService orderService;
 
+  /**
+   * 功能描述: 根据主键查询订单
+   *
+   * @param id
+   * @return
+   */
   @GetMapping("/{id}")
   public Order getOrderByIdd(@PathVariable("id") Integer id) {
 

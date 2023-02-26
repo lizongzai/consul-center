@@ -6,18 +6,20 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 /**
- * <p>
- * 
- * </p>
+ * 功能描述: 商品列表
  *
  * @author lizongzai
  * @since 2023-02-25
  */
 @Data
+//@AllArgsConstructor
+//@NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @TableName("t_product")
 @ApiModel(value="Product对象", description="")

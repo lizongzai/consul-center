@@ -8,8 +8,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.List;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 /**
  * <p>
@@ -20,6 +22,8 @@ import lombok.EqualsAndHashCode;
  * @since 2023-02-26
  */
 @Data
+//@AllArgsConstructor
+//@NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @TableName("t_order")
 @ApiModel(value="Order对象", description="")

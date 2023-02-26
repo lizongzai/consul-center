@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author lizongzai
@@ -24,6 +24,11 @@ public class ProductController {
   @Autowired
   private IProductService productService;
 
+  /**
+   * 功能描述: 获取商品列表
+   *
+   * @return
+   */
   @GetMapping("/list")
   public List<Product> getAllProductList() {
     return productService.getAllProductList();

@@ -5,7 +5,7 @@ import com.example.pojo.Order;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author lizongzai
@@ -13,5 +13,11 @@ import com.example.pojo.Order;
  */
 public interface IOrderService extends IService<Order> {
 
+  /**
+   * 功能描述: 根据主键查询订单
+   *
+   * @param id
+   * @return
+   */
   Order getOrderById(Integer id);
 }
