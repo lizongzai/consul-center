@@ -29,9 +29,14 @@ SpringCloud微服务技术栈
 ## consul-cluster
 ![image](https://user-images.githubusercontent.com/49580847/221404447-2280c078-d80d-4367-a7ee-8ec8a5b7b88e.png)
 
+## using consul config repo
 ![image](https://user-images.githubusercontent.com/49580847/224930194-5f388be5-fc2b-4e5f-9cf1-701a6b065a23.png)
 
 ![image](https://user-images.githubusercontent.com/49580847/221401055-17fcd5d4-a9f9-4ba3-ba62-fa5af2e948af.png)
+
+## access api
+![image](https://user-images.githubusercontent.com/49580847/224933061-8165d7e5-e18b-40d0-b8dc-0ac37064fcba.png)
+
 
 ![image](https://user-images.githubusercontent.com/49580847/224932852-985393cf-bf8c-420e-b3da-a4357428668d.png)
 
