@@ -27,6 +27,12 @@
       <artifactId>spring-cloud-starter-consul-discovery</artifactId>
     </dependency>
 
+    <!-- spring cloud consul config 配置中心依赖 -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-consul-config</artifactId>
+    </dependency>
+
     <!--spring boot actuator 依赖-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
